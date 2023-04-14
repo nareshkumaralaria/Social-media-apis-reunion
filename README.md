@@ -22,10 +22,14 @@ This is a documentation for the Social Media Platform APIs, which are built usin
 4. Run the script by running `node index.js` in the terminal/command prompt.
 
 ## Endpoints
+```bash
+base url : https://social-media-apis-reunion.vercel.app
+```
 - ### Authentication
     `POST /api/authenticate`
     This endpoint authenticates the user and returns a JSON Web Token (JWT) that should be included in the headers of all subsequent requests.
     - Request
+        
         Headers:
         ```bash 
         Content-Type: application/json 
@@ -38,6 +42,7 @@ This is a documentation for the Social Media Platform APIs, which are built usin
         }
         ```
    - Response
+        
         Headers:
         ```bash 
         Content-Type: application/json 
@@ -53,11 +58,13 @@ This is a documentation for the Social Media Platform APIs, which are built usin
     `GET /api/user`
     This endpoint authenticate the request and return the respective user profile
     - Request
+        
         Headers:
         ```bash 
         Authorization: Bearer JWT_TOKEN 
         ```
    - Response
+        
         Headers:
         ```bash 
         Content-Type: application/json 
@@ -75,11 +82,13 @@ This is a documentation for the Social Media Platform APIs, which are built usin
     `POST /api/follow/{id}`
     This endpoint allows the authenticated user to follow a user with the specified ID.
     - Request
+        
         Headers:
         ```bash 
         Authorization: Bearer JWT_TOKEN 
         ```
    - Response
+        
         Headers:
         ```bash 
         Content-Type: application/json 
@@ -95,11 +104,13 @@ This is a documentation for the Social Media Platform APIs, which are built usin
     `POST /api/unfollow/{id}`
     This endpoint allows the authenticated user to unfollow a user with the specified ID.
     - Request
+        
         Headers:
         ```bash 
         Authorization: Bearer JWT_TOKEN 
         ```
    - Response
+        
         Headers:
         ```bash 
         Content-Type: application/json 
@@ -116,6 +127,7 @@ This is a documentation for the Social Media Platform APIs, which are built usin
     `POST /api/posts`
     This endpoint allows an authenticated user to upload a new post.
     - Request
+        
         Headers:
         ```bash 
         Authorization: Bearer JWT_TOKEN 
@@ -128,6 +140,7 @@ This is a documentation for the Social Media Platform APIs, which are built usin
         }
         ```
    - Response
+        
         Headers:
         ```bash 
         Content-Type: application/json 
@@ -146,11 +159,13 @@ This is a documentation for the Social Media Platform APIs, which are built usin
     `DELETE /api/posts/{id}`
     This endpoint allows an authenticated user to delete their own post by passing in the {id} of the post to delete.
     - Request
+        
         Headers:
         ```bash 
         Authorization: Bearer JWT_TOKEN 
         ```
    - Response
+        
         Headers:
         ```bash 
         Content-Type: application/json 
@@ -166,11 +181,13 @@ This is a documentation for the Social Media Platform APIs, which are built usin
     `POST /api/like/{id}`
     This endpoint allows an authenticated user to like a post by passing in the {id} of the post to like.
     - Request
+        
         Headers:
         ```bash 
         Authorization: Bearer JWT_TOKEN 
         ```
    - Response
+        
         Headers:
         ```bash 
         Content-Type: application/json 
@@ -185,11 +202,13 @@ This is a documentation for the Social Media Platform APIs, which are built usin
     `POST /api/unlike/{id}`
     This endpoint allows an authenticated user to unlike a post by passing in the {id} of the post to unlike.
     - Request
+        
         Headers:
         ```bash 
         Authorization: Bearer JWT_TOKEN 
         ```
    - Response
+        
         Headers:
         ```bash 
         Content-Type: application/json 
@@ -204,6 +223,7 @@ This is a documentation for the Social Media Platform APIs, which are built usin
     `POST /api/comment/{id}`
     This endpoint allows authenticated users to add a comment to a post with {id}.
     - Request
+        
         Headers:
         ```bash 
         Authorization: Bearer JWT_TOKEN 
@@ -215,6 +235,7 @@ This is a documentation for the Social Media Platform APIs, which are built usin
         }
         ```
    - Response
+        
         Headers:
         ```bash 
         Content-Type: application/json 
@@ -230,11 +251,13 @@ This is a documentation for the Social Media Platform APIs, which are built usin
     `GET /api/posts/{id}`
     This endpoint allows an authenticated user to get a single post along with its number of likes and comments.
     - Request
+        
         Headers:
         ```bash 
         Authorization: Bearer JWT_TOKEN 
         ```
    - Response
+        
         Headers:
         ```bash 
         Content-Type: application/json 
@@ -253,11 +276,13 @@ This is a documentation for the Social Media Platform APIs, which are built usin
     `GET /api/all_posts`
     This endpoint retrieves all the posts created by the authenticated user and sorts them by post time.
     - Request
+        
         Headers:
         ```bash 
         Authorization: Bearer JWT_TOKEN 
         ```
    - Response
+        
         Headers:
         ```bash 
         Content-Type: application/json 
@@ -283,6 +308,7 @@ This is a documentation for the Social Media Platform APIs, which are built usin
                 },
                 ...
                 ...
+            ]
         }
         ```
         where `POST_ID` is the ID of the signle post, `NUMBER_OF_LIKES` is total number of likes on the that post and `COMMENT_ID` is the ID of the single comments on the post.
