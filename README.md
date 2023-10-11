@@ -54,6 +54,10 @@ base url : https://social-media-apis-reunion.vercel.app
         }
         ```
         where `JWT_TOKEN` is the JWT that should be included in the headers of all subsequent requests.
+
+![/api/authenticate](https://github.com/nareshkumaralaria/Social-media-apis-reunion/assets/57484597/4c95de2f-4db4-4683-b341-40491f5ef1f8)
+
+
 - ### User
     `GET /api/user`
     This endpoint authenticate the request and return the respective user profile
@@ -78,6 +82,9 @@ base url : https://social-media-apis-reunion.vercel.app
         ```
         where `NUMBER_OF_FOLLOWERS` is the number of followers of the authenticated user, and `NUMBER_OF_FOLLOWINGS` is the number of users the authenticated user is following.
 
+        ![/api/user](https://github.com/nareshkumaralaria/Social-media-apis-reunion/assets/57484597/415ebda9-eaca-40c7-9f36-ce1fab6d56ef)
+
+
 - ### Follow/Unfollow
     `POST /api/follow/{id}`
     This endpoint allows the authenticated user to follow a user with the specified ID.
@@ -100,6 +107,8 @@ base url : https://social-media-apis-reunion.vercel.app
         }
         ```
         where `USER_FOLLOWED_SUCCESSFULLY` is a message indicating that the authenticated user has successfully followed the user with the specified ID.
+     
+     ![/api/follow/{id}](https://github.com/nareshkumaralaria/Social-media-apis-reunion/assets/57484597/9204aae9-ae63-43c3-adb4-81867fe912bd)
     
     `POST /api/unfollow/{id}`
     This endpoint allows the authenticated user to unfollow a user with the specified ID.
@@ -122,6 +131,8 @@ base url : https://social-media-apis-reunion.vercel.app
         }
         ```
         where `USER_UNFOLLOWED_SUCCESSFULLY` is a message indicating that the authenticated user has successfully unfollowed the user with the specified ID.
+
+     ![/api/unfollow/{id}](https://github.com/nareshkumaralaria/Social-media-apis-reunion/assets/57484597/b2ee417a-6b6d-4e1f-b4a9-67e76e25e52e)
 
 - ### Posts
     `POST /api/posts`
@@ -155,6 +166,9 @@ base url : https://social-media-apis-reunion.vercel.app
         }
         ```
         where `POST_ID` is the ID of the post created.
+     
+      ![/api/posts](https://github.com/nareshkumaralaria/Social-media-apis-reunion/assets/57484597/16e40b4b-7780-4a15-b912-4692f41efd0e)
+
     
     `DELETE /api/posts/{id}`
     This endpoint allows an authenticated user to delete their own post by passing in the {id} of the post to delete.
@@ -177,6 +191,9 @@ base url : https://social-media-apis-reunion.vercel.app
         }
         ```
         where `POST_ID` is the ID of the deleted post.
+     
+     ![/api/posts/{id}](https://github.com/nareshkumaralaria/Social-media-apis-reunion/assets/57484597/ad892a91-75db-488e-9f99-6b1086b2d28a)
+
         
     `POST /api/like/{id}`
     This endpoint allows an authenticated user to like a post by passing in the {id} of the post to like.
@@ -199,6 +216,9 @@ base url : https://social-media-apis-reunion.vercel.app
         }
         ```
         
+        ![/api/like/{id}](https://github.com/nareshkumaralaria/Social-media-apis-reunion/assets/57484597/d154bebc-7562-4a45-85eb-8449a8ee8623)
+
+        
     `POST /api/unlike/{id}`
     This endpoint allows an authenticated user to unlike a post by passing in the {id} of the post to unlike.
     - Request
@@ -219,6 +239,9 @@ base url : https://social-media-apis-reunion.vercel.app
             "message": "You disliked the post"
         }
         ```
+        
+        ![/api/unlike/{id}](https://github.com/nareshkumaralaria/Social-media-apis-reunion/assets/57484597/865d872c-119c-406e-b40d-a81f9253887a)
+
     
     `POST /api/comment/{id}`
     This endpoint allows authenticated users to add a comment to a post with {id}.
@@ -247,6 +270,9 @@ base url : https://social-media-apis-reunion.vercel.app
         }
         ```
         where `COMMENT_ID` is the ID of the created comment.
+     
+     ![/api/comment/{id}](https://github.com/nareshkumaralaria/Social-media-apis-reunion/assets/57484597/795eedfe-38e1-453c-8b5f-bd8dff665ea5)
+
         
     `GET /api/posts/{id}`
     This endpoint allows an authenticated user to get a single post along with its number of likes and comments.
@@ -272,6 +298,9 @@ base url : https://social-media-apis-reunion.vercel.app
         }
         ```
         where `POST_ID` is the ID of the requested post, `NUMBER_OF_LIKES` is total number of likes on the post and `NUMBER_OF_COMMENTS` is the total number of comments on the post.
+     
+     ![/api/posts/{id}](https://github.com/nareshkumaralaria/Social-media-apis-reunion/assets/57484597/014498e6-289c-460b-b902-0a95c969aac1)
+
         
     `GET /api/all_posts`
     This endpoint retrieves all the posts created by the authenticated user and sorts them by post time.
@@ -312,6 +341,9 @@ base url : https://social-media-apis-reunion.vercel.app
         }
         ```
         where `POST_ID` is the ID of the signle post, `NUMBER_OF_LIKES` is total number of likes on the that post and `COMMENT_ID` is the ID of the single comments on the post.
+     
+     ![/api/all_posts](https://github.com/nareshkumaralaria/Social-media-apis-reunion/assets/57484597/2e564882-bd22-4c3a-af12-034b66136203)
+
 
 
 ## Dummy data for getting token for authentication endpoint
